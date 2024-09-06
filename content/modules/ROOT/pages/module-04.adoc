@@ -15,7 +15,7 @@ Vulnerability]
 
 From the _Detected issues_ section of the recommendation, you can see
 that this recommendation is being triggered by the machine running with
-the `+PermitRootLogin+` setting set to `+yes+`.
+the `PermitRootLogin` setting set to `yes`.
 
 .NetworkManager Insight issue
 image::sshrootlogininsightsdetectedissue.png[NetworkManager
@@ -23,4 +23,4 @@ Insight issue]
 
 In the _Steps to resolve_ section of the recommendation, step-by-step
 guidance on how to resolve the issue is provided. In this case, we will
-follow the recommendation to set `+PermitRootLogin no+`.
+follow the recommendation to set `PermitRootLogin no`.

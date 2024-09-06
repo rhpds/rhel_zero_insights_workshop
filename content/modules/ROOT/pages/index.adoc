@@ -5,25 +5,16 @@ versions of Red Hat Enterprise Linux, while the package is available,
 will likely need it installed. Install the insights-client package on
 the system.
 
-[source,bash]
+[source,bash,run]
 ----
 dnf -y install insights-client
 ----
 
 Next, register your system with Red Hat Insights.
 
-[source,bash]
+[source,bash,run]
 ----
 insights-client --register
-----
-
-[source,bash]
-----
-Successfully registered host rhel-2e23a Automatic scheduling for Insights has been enabled.
-Starting to collect Insights data for rhel-2e23a
-Uploading Insights data.
-Successfully uploaded report from rhel-2e23a to account 6227255.
-View the Red Hat Insights console at https://cloud.redhat.com/insights/
 ----
 
 From the above output, you can observe that the system has been
@@ -33,14 +24,9 @@ that it may be analyzed for any issues.
 
 For future reference, make note of your system hostname.
 
-[source,bash]
+[source,bash,run]
 ----
 hostname
-----
-
-[source,bash]
-----
-rhel-2e23a
 ----
 
 ____
@@ -49,15 +35,9 @@ output above
 ____
 
 At any time in the future, you can get information about Insights
-registration by using the `+--status+` option to `+insights-client+`.
+registration by using the `--status` option to `insights-client`.
 
-[source,bash]
+[source,bash,run]
 ----
 insights-client --status
-----
-
-[source,bash]
-----
-System is registered locally via .registered file. Registered at 2019-08-14T14:12:37.638768
-Insights API confirms registration.
 ----
